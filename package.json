@@ -1,0 +1,29 @@
+{
+  "name": "projeto12-tweteroo",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Primeiro projeto do módulo 03 de back end",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielmonteiropc/projeto12-tweteroo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielmonteiropc/projeto12-tweteroo/issues"
+  },
+  "homepage": "https://github.com/gabrielmonteiropc/projeto12-tweteroo#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
