@@ -17,9 +17,9 @@ app.post('/sign-up', (request, response) => {
 
     const { username, avatar } = request.body;
 
-    const novoUser = { username, avatar };
+    //const novoUser = { username, avatar };
 
-    users.push(novoUser);
+    users.push({ username, avatar });
 
     response.send('ok!');
 });
@@ -38,6 +38,23 @@ app.post('/tweets', (request, response) => {
     tweets.push({ username, tweet });
 
     response.send('Ok!');
+
+});
+
+app.get('/tweets', (request, response) => {
+
+    const tweetsCompletos = tweets.map(tweet => {
+
+        const selecionarUser = users.find(user => user.username === tweet.username);
+
+        const novoTweetsCompletos = { ...tweet, avatar: selecionarUser.avatar };
+
+        return novoTweetsCompletos;
+    });
+
+    console.log(tweetsCompletos);
+
+    response.send(tweetsCompletos.slice(-10).reverse());
 
 });
 
