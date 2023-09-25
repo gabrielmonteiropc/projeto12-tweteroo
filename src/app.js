@@ -59,7 +59,7 @@ app.get('/tweets', (request, response) => {
 });
 
 app.get("/test", (request, response) => {
-    response.send("Tudo ok");
+    response.send("Tudo ok")
 })
 
 //Executando a aplicação servidora para requisições na porta 5000
